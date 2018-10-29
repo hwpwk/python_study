@@ -9,6 +9,9 @@ class Person(object):
 
     def run(self, num):
         print('run'* num)
+# person.say_something()オブジェクトが使われなくなった時点でdef __del__(self)が呼び出される
+    def __del__(self):
+        print('good bye')
 
 person = Person('Tom')
 person.say_something()
