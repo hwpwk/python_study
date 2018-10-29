@@ -1,0 +1,2 @@
+﻿# Fareの欠損値をPclassが3のときのFareの中央値で補完
+df_train_test['Fare'] = df_train_test['Fare'].fillna(df_train_test.query('Pclass==3')['Fare'].median())
