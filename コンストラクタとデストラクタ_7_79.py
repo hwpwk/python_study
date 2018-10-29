@@ -1,7 +1,7 @@
 
 class Person(object):
-    def __init__(self, name):
-        self.name = name# self(自分自身)のnameに引数を入れる
+    def __init__(self, name):# この初期化したものをコンストラクタと呼ぶ
+        self.name = name
 
     def say_something(self):
         print('I am {}. hello'.format(self.name))
