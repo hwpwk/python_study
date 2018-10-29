@@ -33,3 +33,20 @@ class Person(object):
 
 person = Person('Tom')# 1つ下のperson.say_something()がなくてもdef__init__(self)を実行できる
 person.say_something()
+
+#####################################################
+#####################################################
+# say_something()のメソッドを呼び出したときにsay_something(self)のselfを使って自分自身のメソッド（run(self)）にアクセスできるようにself.run()を設定しておく
+class Person(object):
+    def __init__(self, name):
+        self.name = name# self(自分自身)のnameに引数を入れる
+
+    def say_something(self):
+        print('I am {}. hello'.format(self.name))
+        self.run()
+
+    def run(self):
+        print('run')
+
+person = Person('Tom')# 1つ下のperson.say_something()がなくてもdef__init__(self)を実行できる
+person.say_something()
